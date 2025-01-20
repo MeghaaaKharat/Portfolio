@@ -15,14 +15,9 @@ body{
 #header{
     width:100%;
     height:100vh;
-    position:right;
-    background-image:url();
-    background-size:50%;
-    border-radius: 10px;
-    transition: transfrom 0.6s;
-    
+    background-position:center;
+    background-size:cover;  
 }
-
 .container{
     padding:10px 10%;
 }
@@ -33,7 +28,7 @@ body{
     flex-wrap:wrap;
 }
 .logo{
-    width:150px;
+    width:250px;
 }
 
 nav ul li{
@@ -44,7 +39,7 @@ nav ul li{
 nav ul li a{
     color:#fff;
     text-decoration:none;
-    font-size:18px;
+    font-size:23px;
     position:relative;
 } 
 nav ul li a::after{
@@ -62,12 +57,13 @@ nav ul li a:hover::after{
     width:100%;
 }
 .header-text{
-    margin-top: 20%;
+    margin-top: 150px;
     font-size: 30px;
+    position: relative;
 }
 .header-text h1{
-     font-size:30px;
-     margin-top:20px;
+     font-size:40px;
+     margin-top:50px;
 
 }
 .header-text p{
@@ -76,8 +72,49 @@ nav ul li a:hover::after{
 .header-text h1 span{
     margin-top: 20px;
     color: #f10b8d;
+    font-size: 40px;  
+}
+.header-text .btn{
+    background-color: #010a0b;
+    color: white;
+    border: 2px solid white;
+    border-radius: 6px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#element{
+    color:palevioletred;
     font-size: 35px;
 }
+/* Resume Section Style */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: white;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.heading-section{
+    margin-bottom: 40px;
+}
+.heading-section h1.big,
+.heading-section h2{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.heading-section p{
+    font-size: 1.1rem;
+}
+/* Resume section style */
+#resume-section{
+    background: black;
+    padding: 60px 0;
+}
+
+
 /* ---------About ME------ */
 #about{
     padding:80px 0;
@@ -143,7 +180,6 @@ flex-wrap:wrap;
 .tab-contents.active-tab{
     display: block; 
 }
-
 /* ------Services------- */
 #services{
     padding: 30px 0;
@@ -247,7 +283,7 @@ padding: 50px 0;
 .work:hover .layer{
     height: 100%;
 }
-.btn{
+.btn.btn2{
     display: block;
     margin: 50px auto;
     width: fit-content;
@@ -258,9 +294,26 @@ padding: 50px 0;
     color: #fff;
     transition: 0.5s;
 }
-.btn:hover{
+.btn.btn:hover{
   background: #f10b8d;
 }
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    background: #053a57;
+    transition: background 0.5s;
+    }
+.btn:hover{
+    background: #053a57;
+}
+
+
 /* ------Contact----- */
 .contact-left{
     flex-basis: 35%;
@@ -276,8 +329,15 @@ padding: 50px 0;
     margin-right:15px;
     font-size: 25px;
 }
+.contact-left a{
+    color:#fff;
+    text-decoration: none;
+}
+.contact-left a:hover{
+    text-decoration: underline;
+}
 .social-icons{
-    margin-top:30px;
+    margin-top:20px;
 }
 .social-icons a{
     text-decoration: none;
@@ -286,14 +346,17 @@ padding: 50px 0;
     color: #ababab;
     display: inline-block;
     transition: transform 0.5s;
+    
 }
 .social-icons a:hover{
-color: #cd2e60;
+color: #053a57;
 transform:translateY(-5px);
 }
 .btn.btn2{
     display: inline-block;
-    background: #cd2e60;
+    background: #053a57;
+    margin-top: 10px;
+    position: relative;
 }
 .contact-right form{
     width: 100%;
@@ -326,7 +389,7 @@ form .btn2{
     margin-top: 20px;
 }
 .copyright i{
-    color: #cd2e60;
+    color: palevioletred;
 }
 /* ------------CSS For Responsive Screen */
  nav .fas{
@@ -334,12 +397,12 @@ form .btn2{
 }
 @media only screen and (max-width:600px) {
     #header{
-        background-image :url();
-        width: 100px;
+        
+        background-color: black;
 
     }
     .header-text{
-        margin-top: 100%;
+        margin-top: 30%;
         font-size: 16px;
     }
     .header-text h1{
@@ -348,9 +411,10 @@ form .btn2{
      nav .fas{
         display: block;
         font-size: 25px;
+       
     } 
      nav ul{
-        background: #cd2e60;
+        background: #f10b8d;
         position: fixed;
         top: 0;
         right: -200px;
@@ -358,14 +422,14 @@ form .btn2{
         height: 100vh;
         padding-top: 50px;
          z-index: 2; 
-         transition: right 0.5s;
+         transition: right 0.5s; 
     }
     
-    nav ul li{
+     nav ul li{
         display: block;
         margin: 25px;
     }
-    nav ul .fa-solid{
+    nav ul .fas{
         position: absolute;
         top: 25px;
         left: 25px;
@@ -375,9 +439,36 @@ form .btn2{
         font-size:40px;
     }
     .about-col-1, .about-col-2{
-        flex-basis:100% ;
+        flex-basis:80% ;
+    } 
+    .about-col-1{
+        margin-bottom: 30px;
     }
-
+    .about-col-2{
+        font: size 14px; ;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font: size 14px;
+    }
+    .social-icons a{
+        margin-bottom: 40px;
+    }
+    #element{
+        font-size: 30px;
+    }
+    .header-text .btn{
+        margin-bottom: 5px;
+    }
+    .header-text .btn2{
+        margin-bottom: 10px;
+    }
 }
 #msg{
     color: #61b752;
