@@ -393,7 +393,7 @@ form .btn2{
 }
 /* ------------CSS For Responsive Screen */
  nav .fas{
-    display: none; 
+     display: none;  
 }
 @media only screen and (max-width:600px) {
     #header{
@@ -414,7 +414,7 @@ form .btn2{
        
     } 
      nav ul{
-        background: #f10b8d;
+        background: #010a0b;
         position: fixed;
         top: 0;
         right: -200px;
